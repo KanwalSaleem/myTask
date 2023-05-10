@@ -1,0 +1,1 @@
+export const basUrl = 'https://jsonplaceholder.typicode.com'
