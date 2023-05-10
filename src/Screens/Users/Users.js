@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from "react"
 import { UserActions } from "../../NetworkActions/UserActions"
 import { View, Text, FlatList, SafeAreaView, StyleSheet, Button, TouchableOpacity } from "react-native"
 import { UsersList } from "../../Components/UsersList/UsersList"
+import { PrimaryButton } from "../../Components/UsersList/PrimaryButton/PrimaryButton"
 
 
 export const Users = () => {
@@ -63,12 +64,8 @@ export const Users = () => {
                 }}
             />
 
-            <TouchableOpacity onPress={addUser} style={styles.button}>
-                <Text style={styles.buttonTitle}>Add User</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={updateStreet} style={styles.button}>
-                <Text style={styles.buttonTitle}>Update Street</Text>
-            </TouchableOpacity>
+            <PrimaryButton onPress={addUser} title='Add User' />
+            <PrimaryButton onPress={updateStreet} title='Update Street' />
 
         </Fragment>
 
@@ -77,23 +74,6 @@ export const Users = () => {
 }
 
 
-const styles = StyleSheet.create({
-    button: {
-        backgroundColor: "#841584",
-        marginVertical: 10,
-        height: 50,
-        alignItems: "center",
-        justifyContent: "center"
-
-    },
-
-    buttonTitle: {
-        color: '#ffffff',
-        fontSize: 14,
-        fontWeight: "bold"
-    }
-
-});
 
 
 
